@@ -1,10 +1,13 @@
+import json
+import uuid
+
 from lxml import objectify
-from xml.sax.saxutils import escape, unescape
 from django.utils.encoding import smart_str
 import lxml
 import xml.etree.ElementTree as ET
 import re
-import  os, sys
+import  os
+import couchdb
 
 
 class Invoice:
@@ -15,8 +18,9 @@ class Invoice:
         self.finaldict = {}
         self.bandera = 0
 
-
-
+    #
+    # Reads the XML and returns a list key | value e.g.: Tag -> Content
+    #
     def ReadXml(self,root):
 
         for item in root.iter():
@@ -28,7 +32,9 @@ class Invoice:
 
         return newDict
 
-
+    #
+    # Cleans the XML of any white space, special characters, or none values
+    #
     def CleanXML(self,tobecleaned):
      cleanedone = dict(tobecleaned)
      for key,value in tobecleaned.items():
@@ -72,50 +78,112 @@ class Invoice:
 
 class Files:
 
+
     def __init__(self):
+        self.listFiles = {}
+        global path, parser, invoice, db
+        path = "C:\\Users\\Esteban.Flores\\Documents\\GitHub\\Invoices\\facturas"
+        parser = lxml.etree.XMLParser(encoding='utf-8', recover=True)
+        db = self.DBconnect()
+
+        invoice = Invoice()
+
         self.ReadXmlFiles()
-        A = Invoice()
 
+    #
+    # DB connection
+    #
+    def DBconnect(self):
+        '''=========CouchDB'=========='''
+        server = couchdb.Server('http://localhost:5984/')  # ('http://115.146.93.184:5984/')
+        try:
+            db = server.create('invoices')
 
-
+        except:
+            db = server['invoices']
+        return db
+    #
+    # Read all the files in the specified folder
+    #
     def ReadXmlFiles(self):
         # Open a file
-        path = "C:\\Users\\Esteban.Flores\\Documents\\GitHub\\UsefulTools\\facturas"
         dirs = os.listdir(path)
-
-        sizeFolder = len(dirs)
+        increase = 1
+        #Rename the files to a conventional name
         for file in dirs:
-            print(file)
+            try:
+                new_filename = "INV_" +str(uuid.uuid4())+".xml"
+                os.rename(os.path.join(path, file), os.path.join(path, new_filename))
+                increase += 1
+            except: pass
+        self.listFiles = dirs
+        print(increase, " files has been read \n")
+
+        #### For each file, the process of reading the internal XML begins HERE ####
+        for newfile in dirs:
+            try:
+                tree = ET.parse(os.path.join(path, newfile), parser)
+                root = tree.getroot()
+                textoxml = smart_str(ET.tostring(root).lower())
+                initial_XML = invoice.ReadXml(root)
+                inner_XML = dict()
+
+                for key,value in initial_XML.items():
+                    match = re.search(r'xml+', str(value))
+                    if (match):
+                        try:
+                                root2 = ET.fromstring(str(value))
+                                inner_XML = invoice.ReadXml(root2)
+                        except: pass
 
 
-parser = lxml.etree.XMLParser(encoding='utf-8',recover=True)
-tree = ET.parse("facturas/foo.xml",parser)
-root = tree.getroot()
-textoxml = smart_str(ET.tostring(root).lower())
-Invoice = Invoice()
+                # Merge the 2 merge_XML XMLs into one
+                merge_XML = {**initial_XML,**inner_XML}
 
-initial_XML = Invoice.ReadXml(root)
-inner_XML = dict()
+                final_XML = invoice.CleanXML(merge_XML)
+                finalJSON = json.dumps(final_XML, ensure_ascii=False)
 
-#Search inside of the current XML in case there is more xml tags information
-for key,value in initial_XML.items():
-    if ("xml version" in str(value)):
+                if(self.on_data(finalJSON)==True):
+                    print(file, "has been processed and saved\n")
+                else:  print(file, "could not be saved\n")
+
+
+
+
+
+            except Exception as e:
+                print(e)
+                print("There was a problem reading file: ", file)
+
+
+    def on_data(self,data):
+        finaldoc = json.loads(data)
+        saved = None
+
         try:
-            root2 = ET.fromstring(str(value))
-            inner_XML = Invoice.ReadXml(root2)
-        except Exception as e:  print(e)
+
+            db.save(finaldoc)
+            saved = True
+
+
+        except Exception as e:
+            print(e)
+            saved = False
+
+        return saved
+
+
+# '''=========CouchDB'=========='''
+# server = couchdb.Server('http://localhost:5984/')  # ('http://115.146.93.184:5984/')
+# try:
+#     db = server.create('invoices')
+# except:
+#     db = server['invoices']
+A = Files()
 
 
 
 
-# Merge the 2 merge_XML XMLs into one
-merge_XML = {**initial_XML,**inner_XML}
-
-
-new = Invoice.CleanXML(merge_XML)
-
-for i,j in new.items():
-    print(i,"---",str(j).strip())
 
 
 

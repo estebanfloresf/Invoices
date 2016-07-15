@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RespuestaAutorizacionComprobante><claveAccesoConsultada>2405201601179192755900120010100000131741791731017</claveAccesoConsultada><numeroComprobantes>1</numeroComprobantes><autorizaciones><autorizacion><estado>AUTORIZADO</estado><numeroAutorizacion>2405201621525617919275590017317203970</numeroAutorizacion><fechaAutorizacion>2016-05-24T21:52:56.000-05:00</fechaAutorizacion><ambiente>PRODUCCIÓN</ambiente><comprobante>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;factura id="comprobante" version="1.1.0" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"&gt;
+  &lt;infoTributaria&gt;
+    &lt;ambiente&gt;2&lt;/ambiente&gt;
+    &lt;tipoEmision&gt;1&lt;/tipoEmision&gt;
+    &lt;razonSocial&gt;BMI IGUALAS MEDICAS DEL ECUADOR S.A.&lt;/razonSocial&gt;
+    &lt;ruc&gt;1791927559001&lt;/ruc&gt;
+    &lt;claveAcceso&gt;2405201601179192755900120010100000131741791731017&lt;/claveAcceso&gt;
+    &lt;codDoc&gt;01&lt;/codDoc&gt;
+    &lt;estab&gt;001&lt;/estab&gt;
+    &lt;ptoEmi&gt;010&lt;/ptoEmi&gt;
+    &lt;secuencial&gt;000013174&lt;/secuencial&gt;
+    &lt;dirMatriz&gt;SHYRIS S/N Y SUECIA EDF. RENAZZO PLAZA PB  - QUITO&lt;/dirMatriz&gt;
+  &lt;/infoTributaria&gt;
+  &lt;infoFactura&gt;
+    &lt;fechaEmision&gt;24/05/2016&lt;/fechaEmision&gt;
+    &lt;dirEstablecimiento&gt;SHYRIS S/N Y SUECIA EDF. RENAZZO PLAZA PB  - QUITO&lt;/dirEstablecimiento&gt;
+    &lt;contribuyenteEspecial&gt;176&lt;/contribuyenteEspecial&gt;
+    &lt;obligadoContabilidad&gt;SI&lt;/obligadoContabilidad&gt;
+    &lt;tipoIdentificacionComprador&gt;05&lt;/tipoIdentificacionComprador&gt;
+    &lt;razonSocialComprador&gt;ESTEBAN ANTONIO FLORES FREIRE&lt;/razonSocialComprador&gt;
+    &lt;identificacionComprador&gt;1715369342&lt;/identificacionComprador&gt;
+    &lt;totalSinImpuestos&gt;1098.57&lt;/totalSinImpuestos&gt;
+    &lt;totalDescuento&gt;0.00&lt;/totalDescuento&gt;
+    &lt;totalConImpuestos&gt;
+      &lt;totalImpuesto&gt;
+        &lt;codigo&gt;2&lt;/codigo&gt;
+        &lt;codigoPorcentaje&gt;0&lt;/codigoPorcentaje&gt;
+        &lt;baseImponible&gt;1098.57&lt;/baseImponible&gt;
+        &lt;tarifa&gt;0&lt;/tarifa&gt;
+        &lt;valor&gt;0.00&lt;/valor&gt;
+      &lt;/totalImpuesto&gt;
+    &lt;/totalConImpuestos&gt;
+    &lt;propina&gt;0.00&lt;/propina&gt;
+    &lt;importeTotal&gt;1098.57&lt;/importeTotal&gt;
+    &lt;moneda&gt;DOLAR&lt;/moneda&gt;
+  &lt;/infoFactura&gt;
+  &lt;detalles&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;1&lt;/codigoPrincipal&gt;
+      &lt;descripcion&gt;Servicios de Medicina Prepagada&lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;1013.50&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0.00&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;1013.50&lt;/precioTotalSinImpuesto&gt;
+      &lt;detallesAdicionales&gt;
+        &lt;detAdicional nombre="Descripción" valor="Servicios de Medicina Prepagada"/&gt;
+      &lt;/detallesAdicionales&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;0&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;0&lt;/tarifa&gt;
+          &lt;baseImponible&gt;1013.50&lt;/baseImponible&gt;
+          &lt;valor&gt;0.00&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;2&lt;/codigoPrincipal&gt;
+      &lt;descripcion&gt;Contribución Seguro Social Campesino(0.50%)&lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;5.07&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0.00&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;5.07&lt;/precioTotalSinImpuesto&gt;
+      &lt;detallesAdicionales&gt;
+        &lt;detAdicional nombre="Descripción" valor="Contribución Seguro Social Campesino(0.50%)"/&gt;
+      &lt;/detallesAdicionales&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;0&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;0&lt;/tarifa&gt;
+          &lt;baseImponible&gt;5.07&lt;/baseImponible&gt;
+          &lt;valor&gt;0.00&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;3&lt;/codigoPrincipal&gt;
+      &lt;descripcion&gt;Cargos Administrativos&lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;30.00&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0.00&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;30.00&lt;/precioTotalSinImpuesto&gt;
+      &lt;detallesAdicionales&gt;
+        &lt;detAdicional nombre="Descripción" valor="Cargos Administrativos"/&gt;
+      &lt;/detallesAdicionales&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;0&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;0&lt;/tarifa&gt;
+          &lt;baseImponible&gt;30.00&lt;/baseImponible&gt;
+          &lt;valor&gt;0.00&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;4&lt;/codigoPrincipal&gt;
+      &lt;descripcion&gt;Servicios crédito hospitalario y anexos&lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;50.00&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0.00&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;50.00&lt;/precioTotalSinImpuesto&gt;
+      &lt;detallesAdicionales&gt;
+        &lt;detAdicional nombre="Descripción" valor="Servicios crédito hospitalario y anexos"/&gt;
+      &lt;/detallesAdicionales&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;0&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;0&lt;/tarifa&gt;
+          &lt;baseImponible&gt;50.00&lt;/baseImponible&gt;
+          &lt;valor&gt;0.00&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;5&lt;/codigoPrincipal&gt;
+      &lt;descripcion&gt;Gastos de Emisión&lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;0.00&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0.00&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;0.00&lt;/precioTotalSinImpuesto&gt;
+      &lt;detallesAdicionales&gt;
+        &lt;detAdicional nombre="Descripción" valor="Gastos de Emisión"/&gt;
+      &lt;/detallesAdicionales&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;0&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;0&lt;/tarifa&gt;
+          &lt;baseImponible&gt;0.00&lt;/baseImponible&gt;
+          &lt;valor&gt;0.00&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+  &lt;/detalles&gt;
+  &lt;infoAdicional&gt;
+    &lt;campoAdicional nombre="Fecha del documento:"&gt;24/05/2016&lt;/campoAdicional&gt;
+    &lt;campoAdicional nombre="Contrato No:"&gt;SI15Q02329&lt;/campoAdicional&gt;
+    &lt;campoAdicional nombre="Plan:"&gt;Sigma - $120&lt;/campoAdicional&gt;
+    &lt;campoAdicional nombre="Ramo:"&gt;Asistencia Medica Individual&lt;/campoAdicional&gt;
+    &lt;campoAdicional nombre="Período de facturación:"&gt;01/06/2016-31/05/2017&lt;/campoAdicional&gt;
+    &lt;campoAdicional nombre="Base Imponible para retención de impuestos:"&gt;1093.50&lt;/campoAdicional&gt;
+    &lt;campoAdicional nombre="Porcentaje sugerido de retención de impuestos:"&gt;2%&lt;/campoAdicional&gt;
+  &lt;/infoAdicional&gt;
+&lt;ds:Signature Id="Signature79424" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#"&gt;
+&lt;ds:SignedInfo Id="Signature-SignedInfo388151"&gt;
+&lt;ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/&gt;
+&lt;ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/&gt;
+&lt;ds:Reference Id="SignedPropertiesID51367" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature79424-SignedProperties252038"&gt;
+&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/&gt;
+&lt;ds:DigestValue&gt;gfg65lySeyD/+DOMvv9t3M5Zb5Y=&lt;/ds:DigestValue&gt;
+&lt;/ds:Reference&gt;
+&lt;ds:Reference URI="#Certificate1876537"&gt;
+&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/&gt;
+&lt;ds:DigestValue&gt;5r/FVGK+dlDqX9FKVPWqBCISoaI=&lt;/ds:DigestValue&gt;
+&lt;/ds:Reference&gt;
+&lt;ds:Reference Id="Reference-ID-861865" URI="#comprobante"&gt;
+&lt;ds:Transforms&gt;
+&lt;ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/&gt;
+&lt;/ds:Transforms&gt;
+&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/&gt;
+&lt;ds:DigestValue&gt;QSRBHDmaAj4DZyybQxL4MRV7fac=&lt;/ds:DigestValue&gt;
+&lt;/ds:Reference&gt;
+&lt;/ds:SignedInfo&gt;
+&lt;ds:SignatureValue Id="SignatureValue935867"&gt;
+Mj+dA5wAIVIHPzJekeZwY9LJV8MjjmADxtUL5Ry4qFHUL0cLYVklYOQjZs2CC2DJRzwcmWDVW9rf
+sZblawGXvzplMGtGAeT6dTxVZhRKNJL4EvvBk/TRLplv/ZlQDjG5+AOp3A2iNoSdTF9esPKC1KRU
+KDlu6Suc2HjLW8kZQJcxfKeCWfcpuKj6q6jYZRJ/UIIR1xms2+5usHKWkhCRpRXk3CJ4oSYXqnzm
+bdM8OSDTSqGLGT6CCeRTzdj9WHBpoCkjrD2Bq2Hz/wvYZXk56XXrutUbqT0BbgeeWg4CASpAIta8
+j8E6Y+ep435A8Oqx15sO5qz3DjRapWcpTxBceg==
+&lt;/ds:SignatureValue&gt;
+&lt;ds:KeyInfo Id="Certificate1876537"&gt;
+&lt;ds:X509Data&gt;
+&lt;ds:X509Certificate&gt;
+MIIJ/DCCB+SgAwIBAgIETkXsmTANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE2MDIwNDIwMjYxMFoXDTE4MDIwNDIwNTYx
+MFowgbwxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzFAMBEGA1UEBRMKMDAwMDA2NDI3MzArBgNVBAMTJEVTVEhFTEEgREVMIENB
+Uk1FTiBHUklKQUxWQSBQQUxBQ0lPUzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL4F
+LwcPL/Vg/nN0LWIVhWHMPG1+l9eMcL8/PFqr8zBo25a2RgbrclAjIXB79IMq+EVfZ3LOJaFpnCwQ
+VLwn8bkDi98xlY3Der68esMFBf8aR04NN2EB/H5uNbmVE9LiaUgjCX7O630JUtPaHudSfRKP/tK0
+HhMIRxCCRYPMykZYUt8JyWdW6aSFetpxYyt7QrVkKWoC0/pB1SLwTGLxXDAEKv4pVp3/gb+2nEwf
+WWVGmyaiyTrTE5wWranLdsroK/PiZghZJCCfk7UBI8fCcS1C4PAvpIh+iuUSYeqyyIs1ICfLkOr6
+hg/Rxhty20yO23QUXOhIrCETJ3VM9W681pMCAwEAAaOCBR0wggUZMAsGA1UdDwQEAwIHgDBnBgNV
+HSAEYDBeMFwGCysGAQQBgqg7AgIBME0wSwYIKwYBBQUHAgEWP2h0dHA6Ly93d3cuZWNpLmJjZS5l
+Yy9wb2xpdGljYS1jZXJ0aWZpY2Fkby9wZXJzb25hLWp1cmlkaWNhLnBkZjCBkQYIKwYBBQUHAQEE
+gYQwgYEwPgYIKwYBBQUHMAGGMmh0dHA6Ly9vY3NwLmVjaS5iY2UuZWMvZWpiY2EvcHVibGljd2Vi
+L3N0YXR1cy9vY3NwMD8GCCsGAQUFBzABhjNodHRwOi8vb2NzcDEuZWNpLmJjZS5lYy9lamJjYS9w
+dWJsaWN3ZWIvc3RhdHVzL29jc3AwMgYKKwYBBAGCqDsDCgQkEyJCTUkgSUdVQUxBUyBNRURJQ0FT
+IERFTCBFQ1VBRE9SIFNBMB0GCisGAQQBgqg7AwsEDxMNMTc5MTkyNzU1OTAwMTAaBgorBgEEAYKo
+OwMBBAwTCjE3MTMxMjY0MzkwIgYKKwYBBAGCqDsDAgQUExJFU1RIRUxBIERFTCBDQVJNRU4wGAYK
+KwYBBAGCqDsDAwQKEwhHUklKQUxWQTAYBgorBgEEAYKoOwMEBAoTCFBBTEFDSU9TMCEGCisGAQQB
+gqg7AwUEExMRQ09OVEFET1JBIEdFTkVSQUwwHwYKKwYBBAGCqDsDBwQREw9TSFlSSVMgWSBTVUVD
+SUEwGQYKKwYBBAGCqDsDCAQLEwkwMjI5NDE0MDAwFQYKKwYBBAGCqDsDCQQHEwVRdWl0bzAXBgor
+BgEEAYKoOwMMBAkTB0VDVUFET1IwIAYKKwYBBAGCqDsDMwQSExBTT0ZUV0FSRS1BUkNISVZPMB8G
+A1UdEQQYMBaBFGVncmlqYWx2YUBibWkuY29tLmVjMIIB3wYDVR0fBIIB1jCCAdIwggHOoIIByqCC
+AcaGgdVsZGFwOi8vYmNlcWxkYXBzdWJwMS5iY2UuZWMvY249Q1JMMjk2LGNuPUFDJTIwQkFOQ08l
+MjBDRU5UUkFMJTIwREVMJTIwRUNVQURPUixsPVFVSVRPLG91PUVOVElEQUQlMjBERSUyMENFUlRJ
+RklDQUNJT04lMjBERSUyMElORk9STUFDSU9OLUVDSUJDRSxvPUJBTkNPJTIwQ0VOVFJBTCUyMERF
+TCUyMEVDVUFET1IsYz1FQz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2WGNGh0dHA6Ly93
+d3cuZWNpLmJjZS5lYy9DUkwvZWNpX2JjZV9lY19jcmxmaWxlY29tYi5jcmykgbUwgbIxCzAJBgNV
+BAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcwNQYDVQQLEy5FTlRJ
+REFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4wDAYDVQQHEwVRVUlU
+TzElMCMGA1UEAxMcQUMgQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjEPMA0GA1UEAxMGQ1JMMjk2
+MCsGA1UdEAQkMCKADzIwMTYwMjA0MjAyNjEwWoEPMjAxODAyMDQyMDU2MTBaMB8GA1UdIwQYMBaA
+FBj58PvmMhyZZjkqyouyaX1JJ7/OMB0GA1UdDgQWBBTNeuqjV4rZXGyz1Ybb+mkrxTg5wTAJBgNV
+HRMEAjAAMBkGCSqGSIb2fQdBAAQMMAobBFY4LjEDAgSwMA0GCSqGSIb3DQEBCwUAA4ICAQBtOlOx
+NL8ee20P4M4apL9b8jeAUEgTkzGaD5NRQ/7+UOSGTwcfI92Ml8jVlt4XLuA2a4taEg6nLwCRpN+V
+O6mDJg0L7yHOTKbjCixC8BP5ZU70HZSjL4a99WBHjwXfk06WgjBOuh3aBDVJuqHQXr3l8SLMM7nK
+J4HFjmQkO4XRTwbzjXi7VvfwuQ6VEcASn2Qrce58NBSDLkv2ZCPkitTVL+8hrXRh2dIqT74kWoFN
+Dagjg45HEl+xFopS0UElUE7UXHQhqwehoxXhzv/hWuR26u4OMPni8FJ/cAgJAIpT4GFpByPLhTe8
+4WT6oRbHa9P5rJTjXqJ41yMgEwLd/+oJ40kbVr4WdqGsz8uVBDhGOcv+ptFb0Q7/MgSq21awQm+L
+skYx67EUcsFyQZUKV+YNW4Hfb753niERUNRu0uOawT/gqholxQYOM560gjAQ2OrD430xpQPDi0lY
+wVoyFWbAxY+iN86Nw7Y+ES0AZYTi/oP2bN/enRf/+njaIAKIwA09vh2ywT/kI4tm0sXHTtZCbaLv
+ZfnVXjNe+iQvq9msTUzwsBMMBO7disUtiQCzb2xWQwC9nnfa/EqO+PElDANzCyj8YFNG6e0U7/j1
+CTwSFquRSlDd3Scw7WQFfWWl+fTJpIzvhUTs8C40TNpOGFkJ+/sGE4hluL/sZtr1SNGL5w==
+&lt;/ds:X509Certificate&gt;
+&lt;/ds:X509Data&gt;
+&lt;ds:KeyValue&gt;
+&lt;ds:RSAKeyValue&gt;
+&lt;ds:Modulus&gt;
+vgUvBw8v9WD+c3QtYhWFYcw8bX6X14xwvz88WqvzMGjblrZGButyUCMhcHv0gyr4RV9ncs4loWmc
+LBBUvCfxuQOL3zGVjcN6vrx6wwUF/xpHTg03YQH8fm41uZUT0uJpSCMJfs7rfQlS09oe51J9Eo/+
+0rQeEwhHEIJFg8zKRlhS3wnJZ1bppIV62nFjK3tCtWQpagLT+kHVIvBMYvFcMAQq/ilWnf+Bv7ac
+TB9ZZUabJqLJOtMTnBatqct2yugr8+JmCFkkIJ+TtQEjx8JxLULg8C+kiH6K5RJh6rLIizUgJ8uQ
+6vqGD9HGG3LbTI7bdBRc6EisIRMndUz1brzWkw==
+&lt;/ds:Modulus&gt;
+&lt;ds:Exponent&gt;AQAB&lt;/ds:Exponent&gt;
+&lt;/ds:RSAKeyValue&gt;
+&lt;/ds:KeyValue&gt;
+&lt;/ds:KeyInfo&gt;
+&lt;ds:Object Id="Signature79424-Object409980"&gt;&lt;etsi:QualifyingProperties Target="#Signature79424"&gt;&lt;etsi:SignedProperties Id="Signature79424-SignedProperties252038"&gt;&lt;etsi:SignedSignatureProperties&gt;&lt;etsi:SigningTime&gt;2016-05-25T04:52:25+02:00&lt;/etsi:SigningTime&gt;&lt;etsi:SigningCertificate&gt;&lt;etsi:Cert&gt;&lt;etsi:CertDigest&gt;&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/&gt;&lt;ds:DigestValue&gt;lduo4+yWQKvfs4hYO21ZkEVrjXk=&lt;/ds:DigestValue&gt;&lt;/etsi:CertDigest&gt;&lt;etsi:IssuerSerial&gt;&lt;ds:X509IssuerName&gt;CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC&lt;/ds:X509IssuerName&gt;&lt;ds:X509SerialNumber&gt;1313205401&lt;/ds:X509SerialNumber&gt;&lt;/etsi:IssuerSerial&gt;&lt;/etsi:Cert&gt;&lt;/etsi:SigningCertificate&gt;&lt;etsi:SignerRole&gt;&lt;etsi:ClaimedRoles&gt;&lt;etsi:ClaimedRole&gt;emisor&lt;/etsi:ClaimedRole&gt;&lt;/etsi:ClaimedRoles&gt;&lt;/etsi:SignerRole&gt;&lt;/etsi:SignedSignatureProperties&gt;&lt;etsi:SignedDataObjectProperties&gt;&lt;etsi:DataObjectFormat ObjectReference="#Reference-ID-861865"&gt;&lt;etsi:Description&gt;Factura firmada&lt;/etsi:Description&gt;&lt;etsi:MimeType&gt;text/xml&lt;/etsi:MimeType&gt;&lt;/etsi:DataObjectFormat&gt;&lt;/etsi:SignedDataObjectProperties&gt;&lt;/etsi:SignedProperties&gt;&lt;/etsi:QualifyingProperties&gt;&lt;/ds:Object&gt;&lt;/ds:Signature&gt;&lt;/factura&gt;</comprobante><mensajes></mensajes></autorizacion></autorizaciones></RespuestaAutorizacionComprobante>
