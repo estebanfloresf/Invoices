@@ -1,92 +1,115 @@
 import json
 import uuid
+from pymongo import MongoClient
 
-from lxml import objectify
+import xmltodict as xmltodict
 from django.utils.encoding import smart_str
 import lxml
 import xml.etree.ElementTree as ET
 import re
-import  os
+import os
 import couchdb
 
 
 class Invoice:
-
     def __init__(self):
+
         self.tagname = []
         self.tagcontent = []
-        self.finaldict = {}
-        self.bandera = 0
+        self.final_dict = {}
+        self.flag = 0
 
     #
     # Reads the XML and returns a list key | value e.g.: Tag -> Content
     #
-    def ReadXml(self,root):
-
+    def readXML(self, root):
         for item in root.iter():
-            tag = item.tag
-            self.tagname.append(item.tag)
-            self.tagcontent.append(item.text)
+            self.tagname.append(str(item.tag).lower())
+            self.tagcontent.append(str(item.text).lower())
 
-        newDict = dict(zip(self.tagname,self.tagcontent))
+        newdict = dict(zip(self.tagname, self.tagcontent))
 
-        return newDict
+        return newdict
 
     #
-    # Cleans the XML of any white space, special characters, or none values
+    # Cleans the JSON of any white space, special characters, or none values
     #
-    def CleanXML(self,tobecleaned):
-     cleanedone = dict(tobecleaned)
-     for key,value in tobecleaned.items():
+    def cleanJSON(self, tobecleaned):
 
-         # Clean out xml elements
-         match = re.search(r'xml+', str(value))
-         if (match):
-             try:
-                del cleanedone[key]
-             except Exception as e: pass
+        '''          JSON CLEANING                '''
+        decoded = json.loads(tobecleaned)
+        band = 0
+        for element in list(decoded):
+            if band == 0:
+                match = re.search(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',
+                                  str(element))
+                if (match and band == 0):
+                    try:
+                        decoded.pop(element)
+                        band += 1
+                    except Exception as e:
+                        print(e)
 
-         # Clean out http elements of the key
-         match = re.search(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', str(key))
-         if (match):
-             try:
-                 del cleanedone[key]
-             except Exception as e:  pass
+            if band == 0:
+                match = re.match(r'\s+', str(decoded[element]))
+                if (match):
+                    if element in decoded:
+                        try:
+                            decoded.pop(element)
+                            band += 1
+                        except Exception as e:
+                            pass
 
-         # Clean out http elements of the values
-         match = re.search(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', str(value))
-         if (match):
-             try:
-                 del cleanedone[key]
-             except Exception as e: pass
+            if band == 0:
+                match = re.match(r'ds:signature+', str(element))
+                if (match):
+                    try:
+                        decoded.pop(element)
+                        band += 1
+                    except Exception as e:
+                        pass
 
-         # Clean out white spaces
-         match = re.match(r'\s+', str(value))
-         if (match):
-             try:
-                 del cleanedone[key]
-             except Exception as e: pass
+            # Clean out none values
+            if band == 0:
+                match = re.match(r'none+', str(element))
+                if (match):
+                    try:
+                        decoded.pop(element)
+                        band += 1
+                    except Exception as e:
+                        pass
 
-         # Clean out none values
-         match = re.match(r'None+', str(value))
-         if (match):
-             try:
-                 del cleanedone[key]
-             except Exception as e:           pass
+            band = 0
 
-     return cleanedone
+        for i in list(decoded['comprobante']['factura']):
+            match = re.search(r'ds:signature+', str(i))
+            if (match):
+                try:
+                    decoded['comprobante']['factura'].pop(i)
+                    break
+                except Exception as e:
+                    print(e)
+
+        for final in list(decoded):
+            try:
+                if final == "comprobante":
+                    decoded = json.dumps(decoded['comprobante'])
+                    break
+            except:
+                pass
+
+        return decoded
+
 
 class Files:
-
-
     def __init__(self):
         self.listFiles = {}
-        global path, parser, invoice, db
+        global path, parser, invoice, db, new_filename
         path = "C:\\Users\\Esteban.Flores\\Documents\\GitHub\\Invoices\\facturas"
-        parser = lxml.etree.XMLParser(encoding='utf-8', recover=True)
-        db = self.DBconnect()
 
+        db = self.DBconnect()
         invoice = Invoice()
+        new_filename = ""
 
         self.ReadXmlFiles()
 
@@ -94,96 +117,76 @@ class Files:
     # DB connection
     #
     def DBconnect(self):
-        '''=========CouchDB'=========='''
-        server = couchdb.Server('http://localhost:5984/')  # ('http://115.146.93.184:5984/')
+        # '''=========CouchDB'=========='''
+        # server = couchdb.Server('http://localhost:5984/')  # ('http://115.146.93.184:5984/')
+        client = MongoClient()
+        db = client.primer
+
         try:
-            db = server.create('invoices')
+            db = client.primer
 
         except:
-            db = server['invoices']
+            db = client['primer']
         return db
+
     #
     # Read all the files in the specified folder
     #
     def ReadXmlFiles(self):
         # Open a file
         dirs = os.listdir(path)
-        increase = 1
-        #Rename the files to a conventional name
-        for file in dirs:
+        # Rename the files to a conventional name
+        for file in list(dirs):
             try:
-                new_filename = "INV_" +str(uuid.uuid4())+".xml"
+                new_filename = "INV_" + str(uuid.uuid4()) + ".xml"
                 os.rename(os.path.join(path, file), os.path.join(path, new_filename))
-                increase += 1
-            except: pass
-        self.listFiles = dirs
-        print(increase, " files has been read \n")
+                self.processFile(new_filename)
+            except:
+                print("There was a problem renaming file: " + "\n")
 
-        #### For each file, the process of reading the internal XML begins HERE ####
-        for newfile in dirs:
-            try:
-                tree = ET.parse(os.path.join(path, newfile), parser)
-                root = tree.getroot()
-                textoxml = smart_str(ET.tostring(root).lower())
-                initial_XML = invoice.ReadXml(root)
-                inner_XML = dict()
-
-                for key,value in initial_XML.items():
-                    match = re.search(r'xml+', str(value))
-                    if (match):
-                        try:
-                                root2 = ET.fromstring(str(value))
-                                inner_XML = invoice.ReadXml(root2)
-                        except: pass
-
-
-                # Merge the 2 merge_XML XMLs into one
-                merge_XML = {**initial_XML,**inner_XML}
-
-                final_XML = invoice.CleanXML(merge_XML)
-                finalJSON = json.dumps(final_XML, ensure_ascii=False)
-
-                if(self.on_data(finalJSON)==True):
-                    print(file, "has been processed and saved\n")
-                else:  print(file, "could not be saved\n")
-
-
-
-
-
-            except Exception as e:
-                print(e)
-                print("There was a problem reading file: ", file)
-
-
-    def on_data(self,data):
-        finaldoc = json.loads(data)
-        saved = None
-
+    def processFile(self, file):
         try:
+            parser = ET.XMLParser(encoding="UTF-8")
+            tree = ET.parse(os.path.join(path, file), parser)
+            root = tree.getroot()
 
-            db.save(finaldoc)
-            saved = True
+            initial_xml = invoice.readXML(root)
 
+            for key, value in initial_xml.items():
+                match = re.search(r'xml+', str(value))
+                if match:
+                    try:
+                        initial_xml[key] = xmltodict.parse(smart_str(value).strip())
+                        break
+                    except Exception as e:
+                        print("Problem in the inner xml")
+
+            ini_json = json.dumps(initial_xml)
+
+            final_json = invoice.cleanJSON(ini_json)
+
+            if self.on_data(final_json) == True:
+                print(file, "has been processed and saved\n")
+
+            else:
+                print(file, "could not be saved, file already exists\n")
 
         except Exception as e:
-            print(e)
-            saved = False
+            print("There was a problem reading file: ", file)
 
-        return saved
+    def on_data(self, data):
+        finaldoc = json.loads(data)
+
+        try:
+            id = smart_str(finaldoc['factura']['infotributaria']['claveacceso'])
+            finaldoc["_id"] = id[-10:]
+            db.primer.insert_one(finaldoc)
+            status = True
+
+        except Exception as e:
+            status = False
+
+        return status
 
 
-# '''=========CouchDB'=========='''
-# server = couchdb.Server('http://localhost:5984/')  # ('http://115.146.93.184:5984/')
-# try:
-#     db = server.create('invoices')
-# except:
-#     db = server['invoices']
 A = Files()
-
-
-
-
-
-
-
