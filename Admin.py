@@ -11,7 +11,7 @@ client = MongoClient()
 db = client.primer
 coll = db.dataset
 
-rename = db.primer.updateMany( {}, { "$rename": { "nmae": "name" } } )
+
 
 cursor = db.primer.find({ "factura.infofactura.importetotal": { '$gt': '0' } }, {"factura.infotributaria.nombrecomercial":1,
                                                                                  "factura.infofactura.fechaemision":1 ,
@@ -25,12 +25,11 @@ cursor = db.primer.find({ "factura.infofactura.importetotal": { '$gt': '0' } }, 
 
 with open('dict.csv', 'w') as csv_file:
     fieldnames = ['nombrecomercial', 'fechaemision','totalsinimpuestos','impuesto','propina','total']
-    writer = csv.DictWriter(csv_file, fieldnames = fieldnames)
+    writer = csv.DictWriter(csv_file)
+    writer.writerow(fieldnames)
     for document in cursor:
         flat = flatdict.FlatDict(document)
-        print(flat)
-        # for key, value in flat.items():
-        #     writer.writerow(value)
+        writer.writerow(flat)
 
 
-    #print(db.primer.count())
+#print(db.primer.count())
