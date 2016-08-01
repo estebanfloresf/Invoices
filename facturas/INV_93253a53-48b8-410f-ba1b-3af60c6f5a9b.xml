@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><factura xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>MILDEPORTES S.A.</razonSocial>
+    <nombreComercial>PUMA</nombreComercial>
+    <ruc>1792056047001</ruc>
+    <claveAcceso>0207201601179205604700120080300000017170000000018</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>008</estab>
+    <ptoEmi>030</ptoEmi>
+    <secuencial>000001717</secuencial>
+    <dirMatriz>DE LOS CEREZOS S/N Y GALO PLAZA LASSO</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>02/07/2016</fechaEmision>
+    <dirEstablecimiento>PLAZA DE LAS AMERICAS LOCAL  17 AV. NACIONES UNIDAS Y AMERICA</dirEstablecimiento>
+    <contribuyenteEspecial>234</contribuyenteEspecial>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+    <razonSocialComprador>ESTEBAN FLORES</razonSocialComprador>
+    <identificacionComprador>1715369342</identificacionComprador>
+    <totalSinImpuestos>63.54</totalSinImpuestos>
+    <totalDescuento>21.18</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>3</codigoPorcentaje>
+        <baseImponible>63.54</baseImponible>
+        <valor>8.90</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0</propina>
+    <importeTotal>72.44</importeTotal>
+    <moneda>DOLAR</moneda>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>21615160</codigoPrincipal>
+      <codigoAuxiliar>4056204217375</codigoAuxiliar>
+      <descripcion>CHOMPA    BMW MSP TRACK JACKET</descripcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>84.73</precioUnitario>
+      <descuento>21.18</descuento>
+      <precioTotalSinImpuesto>63.54</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>3</codigoPorcentaje>
+          <tarifa>14</tarifa>
+          <baseImponible>63.54</baseImponible>
+          <valor>8.90</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="MAIL">ESTEBAN_FS@HOTMAIL.COM</campoAdicional>
+    <campoAdicional nombre="MARCA">MILDEPORTES</campoAdicional>
+  </infoAdicional>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature1593264907">
+<ds:SignedInfo Id="SignedInfoDoc">
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<ds:Reference Id="SignedProperties978" Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>oGH+HmHLAgMXAgUoStcqKZX8Okc=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Cert265" URI="#Certificate">
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>8b5bIjGPytAMdLw6m9Z0kSewkOQ=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Id="Reference187" URI="#comprobante">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>VNki1C6fpwyWoBiEzrDeFcX9vnI=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+pkNVdujVLuULQ0H/vB1lFnUq27lmbUe4PBKdl0Ubq4brSm/M+h2QwK9S8DzywKylFuy45lmvnvG6
+4A7LQGrxyyXzPKz2oM3VPCagiP4LyKMaaCaqNA1DJbrbXX5VUrAIjFFUDD7rqU6h2jmxBqu05tHc
+gW0x38TLLk724bqVOuR57SX2gNjOJ2kGCpzbom8i3CWFdvYwjFpHiAOt6bs3OE4acVWH5JWRUSfl
+7dufrBfLKtkdSPgK4d2G0kEcEoCaY36Wo92ztMZ74MmNrRtzo6rKm2FL1ZXGPy8cxq6j0JomRasB
+gxhEprYULikO7jQd3wBgfrasFti1SPSctLoAZw==
+</ds:SignatureValue>
+<ds:KeyInfo Id="Certificate">
+<ds:X509Data>
+<ds:X509Certificate>
+MIIJ9DCCB9ygAwIBAgIETkU4gDANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE1MDkxNjE4MDUwMVoXDTE2MDkxNjE4MzUw
+MVowgbQxCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzE4MBEGA1UEBRMKMDAwMDEzMjYwMzAjBgNVBAMTHEpBQ09CIFZMQURJTUlS
+IEJFTklURVogUE9OQ0UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDU1mKp4vSETGPT
+MchVSApFaaJ+wI0PpEZoEdczy4uKiNATBGAN+fRvT2vfJbQ7DR9GK4WLPmC2/jb8NLivj04nyqdw
+7dNhd2zmxhCz4xwTm1DNtuE6bigfsFmD+L/FvHRkeNzYJ6E3pmbI/m7yNYceUSMvZbmx1MrXco3G
+l2yiDNkC0C6TwgWGX1dj3HTXbUzLHWjJo+uYqiJ+mfLRxgEQxRWGTfYIOXWnwq2u+HHEioDwfyN3
+pgZPtQIJ/kWSQFDohuq3ECpARn/fGfbR2JW1GAWp2nnAyFqzeWfJID6x+eQNcvq6UQNHFwKjtcck
+92Rw6ygTpGKI2SEyNkpiCy15AgMBAAGjggUdMIIFGTALBgNVHQ8EBAMCB4AwZwYDVR0gBGAwXjBc
+BgsrBgEEAYKoOwICATBNMEsGCCsGAQUFBwIBFj9odHRwOi8vd3d3LmVjaS5iY2UuZWMvcG9saXRp
+Y2EtY2VydGlmaWNhZG8vcGVyc29uYS1qdXJpZGljYS5wZGYwgZEGCCsGAQUFBwEBBIGEMIGBMD4G
+CCsGAQUFBzABhjJodHRwOi8vb2NzcC5lY2kuYmNlLmVjL2VqYmNhL3B1YmxpY3dlYi9zdGF0dXMv
+b2NzcDA/BggrBgEFBQcwAYYzaHR0cDovL29jc3AxLmVjaS5iY2UuZWMvZWpiY2EvcHVibGljd2Vi
+L3N0YXR1cy9vY3NwMB8GCisGAQQBgqg7AwoEERMPTUlMREVQT1JURVMgUyBBMB0GCisGAQQBgqg7
+AwsEDxMNMTc5MjA1NjA0NzAwMTAaBgorBgEEAYKoOwMBBAwTCjE3MTQ3NjY3MDQwHgYKKwYBBAGC
+qDsDAgQQEw5KQUNPQiBWTEFESU1JUjAXBgorBgEEAYKoOwMDBAkTB0JFTklURVowFQYKKwYBBAGC
+qDsDBAQHEwVQT05DRTAgBgorBgEEAYKoOwMFBBITEENPTlRBRE9SIEdFTkVSQUwwNgYKKwYBBAGC
+qDsDBwQoEyZBViBERUxPUyBTSFlSSVMgTjQxMTUxIEUgSVNMQSBGTE9SRUFOQTAZBgorBgEEAYKo
+OwMIBAsTCTAyMjI1NDQwMDAVBgorBgEEAYKoOwMJBAcTBVF1aXRvMBcGCisGAQQBgqg7AwwECRMH
+RUNVQURPUjAgBgorBgEEAYKoOwMzBBITEFNPRlRXQVJFLUFSQ0hJVk8wJAYDVR0RBB0wG4EZamJl
+bml0ZXpAMTAwMGRlcG9ydGVzLmNvbTCCAd8GA1UdHwSCAdYwggHSMIIBzqCCAcqgggHGhoHVbGRh
+cDovL2JjZXFsZGFwc3VicDEuYmNlLmVjL2NuPUNSTDI2MCxjbj1BQyUyMEJBTkNPJTIwQ0VOVFJB
+TCUyMERFTCUyMEVDVUFET1IsbD1RVUlUTyxvdT1FTlRJREFEJTIwREUlMjBDRVJUSUZJQ0FDSU9O
+JTIwREUlMjBJTkZPUk1BQ0lPTi1FQ0lCQ0Usbz1CQU5DTyUyMENFTlRSQUwlMjBERUwlMjBFQ1VB
+RE9SLGM9RUM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlhjRodHRwOi8vd3d3LmVjaS5i
+Y2UuZWMvQ1JML2VjaV9iY2VfZWNfY3JsZmlsZWNvbWIuY3JspIG1MIGyMQswCQYDVQQGEwJFQzEi
+MCAGA1UEChMZQkFOQ08gQ0VOVFJBTCBERUwgRUNVQURPUjE3MDUGA1UECxMuRU5USURBRCBERSBD
+RVJUSUZJQ0FDSU9OIERFIElORk9STUFDSU9OLUVDSUJDRTEOMAwGA1UEBxMFUVVJVE8xJTAjBgNV
+BAMTHEFDIEJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxDzANBgNVBAMTBkNSTDI2MDArBgNVHRAE
+JDAigA8yMDE1MDkxNjE4MDUwMVqBDzIwMTYwOTE2MTgzNTAxWjAfBgNVHSMEGDAWgBQY+fD75jIc
+mWY5KsqLsml9SSe/zjAdBgNVHQ4EFgQUEkhYLoVkRcCWHu0lFKuW8spCX+UwCQYDVR0TBAIwADAZ
+BgkqhkiG9n0HQQAEDDAKGwRWOC4xAwIEsDANBgkqhkiG9w0BAQsFAAOCAgEADwsxZ0g06ZVNO9Th
+6qbVWXOa9mV2zS3I4ihOy2Ae7wa8p10RjpvXDiCwLMjG4FkrrTD+jLrufp60AxxkLy5Eyfzj/JcM
+S+5ad8HDXw4LitIM3jCDU7UeRMjXEDha009dA6IBG6ATGuf8BneEabfCsUoLmEIHDpoiAPKb8B7u
+tcs6T/djg+JTh0mQRkQGzGuX4F4pJ75AEUL3uHmKcuJ0P8JB0tHsafHDmqh10WC75jLRO5WJwgqI
+vkWtBzRcvwMZ9D+nqj5vLaYgAkXKC2+dvyKelqfE4bBzTFuoJg3WXEELOFkoiZ1GGBMgpOvB/pfX
+PK+s7aWoQomujwfYUYtsnW0osOa2LLEibXHCH4AecShE297F1C/6XFnuA0p3T2CP8hLm8VGSMmgX
+fIaLk/VLDpyIGcrSPR7DuCOZgA0Pr9yCLfJHqAayY75GFINw4HLHq20yPjafNPmBBGHHCKtVWXTk
+HFK8EgYVNieIKLxNU5lHNihiDTy6NXaWAdCD1dTtJCHzC/W73sW2kHMTf56UFoJOoZQKJsB0CNsE
+hV9bWN8C6Kqv/v/Kp81E8GltzU47iNphXWNxE7/4xS7ohFSCsoDkkRSK8tTu+2/pU1ZrEU0UB7mC
+3uA5y45ZGYjvRvQUKXAs030n7zRiljL0TMC4nvY1jgliv+Zm/fG/wIdARUk=
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+1NZiqeL0hExj0zHIVUgKRWmifsCND6RGaBHXM8uLiojQEwRgDfn0b09r3yW0Ow0fRiuFiz5gtv42
+/DS4r49OJ8qncO3TYXds5sYQs+McE5tQzbbhOm4oH7BZg/i/xbx0ZHjc2CehN6ZmyP5u8jWHHlEj
+L2W5sdTK13KNxpdsogzZAtAuk8IFhl9XY9x0121Myx1oyaPrmKoifpny0cYBEMUVhk32CDl1p8Kt
+rvhxxIqA8H8jd6YGT7UCCf5FkkBQ6IbqtxAqQEZ/3xn20diVtRgFqdp5wMhas3lnySA+sfnkDXL6
+ulEDRxcCo7XHJPdkcOsoE6RiiNkhMjZKYgsteQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object Id="Signature1593264907-Object"><etsi:QualifyingProperties Target="#Signature1593264907"><etsi:SignedProperties Id="SignedProperties"><etsi:SignedSignatureProperties><etsi:SigningTime>2016-07-06T14:58:13</etsi:SigningTime><etsi:SigningCertificate><etsi:Cert><etsi:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>zqLuN2L8RQANFiw7yeZ2XtjdkZc=</ds:DigestValue></etsi:CertDigest><etsi:IssuerSerial><ds:X509IssuerName>CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC</ds:X509IssuerName><ds:X509SerialNumber>1313159296</ds:X509SerialNumber></etsi:IssuerSerial></etsi:Cert></etsi:SigningCertificate></etsi:SignedSignatureProperties><etsi:SignedDataObjectProperties><etsi:DataObjectFormat ObjectReference="#Reference187"><etsi:Description>Comprobante SRI by QuindeFee</etsi:Description><etsi:MimeType>text/xml</etsi:MimeType></etsi:DataObjectFormat></etsi:SignedDataObjectProperties></etsi:SignedProperties></etsi:QualifyingProperties></ds:Object>
+</ds:Signature></factura>

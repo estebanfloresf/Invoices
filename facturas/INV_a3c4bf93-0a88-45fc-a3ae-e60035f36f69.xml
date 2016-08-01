@@ -1,0 +1,272 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns2:autorizacionComprobanteResponse xmlns:ns2="http://ec.gob.sri.ws.autorizacion">
+      <RespuestaAutorizacionComprobante>
+        <claveAccesoConsultada>1402201601179127415600120050010000539840007038612</claveAccesoConsultada>
+        <numeroComprobantes>1</numeroComprobantes>
+        <autorizaciones>
+          <autorizacion>
+            <estado>AUTORIZADO</estado>
+            <numeroAutorizacion>1402201615312117912741560014296543159</numeroAutorizacion>
+            <fechaAutorizacion>2016-02-14T15:31:21-05:00</fechaAutorizacion>
+            <ambiente>PRODUCCIÓN</ambiente>
+            <comprobante>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;factura id="comprobante" version="1.0.0"&gt;
+  &lt;infoTributaria&gt;
+    &lt;ambiente&gt;2&lt;/ambiente&gt;
+    &lt;tipoEmision&gt;1&lt;/tipoEmision&gt;
+    &lt;razonSocial&gt;Aserlaco S.A&lt;/razonSocial&gt;
+    &lt;nombreComercial&gt;Aserlaco S.A&lt;/nombreComercial&gt;
+    &lt;ruc&gt;1791274156001&lt;/ruc&gt;
+    &lt;claveAcceso&gt;1402201601179127415600120050010000539840007038612&lt;/claveAcceso&gt;
+    &lt;codDoc&gt;01&lt;/codDoc&gt;
+    &lt;estab&gt;005&lt;/estab&gt;
+    &lt;ptoEmi&gt;001&lt;/ptoEmi&gt;
+    &lt;secuencial&gt;000053984&lt;/secuencial&gt;
+    &lt;dirMatriz&gt;Rábida N26-249 y Av. Fco. de Orellana&lt;/dirMatriz&gt;
+  &lt;/infoTributaria&gt;
+  &lt;infoFactura&gt;
+    &lt;fechaEmision&gt;14/02/2016&lt;/fechaEmision&gt;
+    &lt;dirEstablecimiento&gt;Av. Amazonas N6-114 y Av. República&lt;/dirEstablecimiento&gt;
+    &lt;contribuyenteEspecial&gt;00636&lt;/contribuyenteEspecial&gt;
+    &lt;obligadoContabilidad&gt;SI&lt;/obligadoContabilidad&gt;
+    &lt;tipoIdentificacionComprador&gt;05&lt;/tipoIdentificacionComprador&gt;
+    &lt;razonSocialComprador&gt;ESTEBAN FLORES&lt;/razonSocialComprador&gt;
+    &lt;identificacionComprador&gt;1715369342&lt;/identificacionComprador&gt;
+    &lt;totalSinImpuestos&gt;28.57&lt;/totalSinImpuestos&gt;
+    &lt;totalDescuento&gt;0&lt;/totalDescuento&gt;
+    &lt;totalConImpuestos&gt;
+      &lt;totalImpuesto&gt;
+        &lt;codigo&gt;2&lt;/codigo&gt;
+        &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+        &lt;baseImponible&gt;28.57&lt;/baseImponible&gt;
+        &lt;valor&gt;3.42&lt;/valor&gt;
+      &lt;/totalImpuesto&gt;
+    &lt;/totalConImpuestos&gt;
+    &lt;propina&gt;2.86&lt;/propina&gt;
+    &lt;importeTotal&gt;34.85&lt;/importeTotal&gt;
+    &lt;moneda&gt;DOLAR&lt;/moneda&gt;
+  &lt;/infoFactura&gt;
+  &lt;detalles&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;1009&lt;/codigoPrincipal&gt;
+      &lt;codigoAuxiliar&gt;1009&lt;/codigoAuxiliar&gt;
+      &lt;descripcion&gt;Limonada-Coco            &lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;1.76&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;1.76&lt;/precioTotalSinImpuesto&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;12.00&lt;/tarifa&gt;
+          &lt;baseImponible&gt;1.76&lt;/baseImponible&gt;
+          &lt;valor&gt;0.21&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;1009&lt;/codigoPrincipal&gt;
+      &lt;codigoAuxiliar&gt;1009&lt;/codigoAuxiliar&gt;
+      &lt;descripcion&gt;Limonada-Coco            &lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;1.76&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;1.76&lt;/precioTotalSinImpuesto&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;12.00&lt;/tarifa&gt;
+          &lt;baseImponible&gt;1.76&lt;/baseImponible&gt;
+          &lt;valor&gt;0.21&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;1009&lt;/codigoPrincipal&gt;
+      &lt;codigoAuxiliar&gt;1009&lt;/codigoAuxiliar&gt;
+      &lt;descripcion&gt;Limonada-Coco            &lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;1.76&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;1.76&lt;/precioTotalSinImpuesto&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;12.00&lt;/tarifa&gt;
+          &lt;baseImponible&gt;1.76&lt;/baseImponible&gt;
+          &lt;valor&gt;0.21&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;1403&lt;/codigoPrincipal&gt;
+      &lt;codigoAuxiliar&gt;1403&lt;/codigoAuxiliar&gt;
+      &lt;descripcion&gt;AguaGas Botella          &lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;1.41&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;1.41&lt;/precioTotalSinImpuesto&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;12.00&lt;/tarifa&gt;
+          &lt;baseImponible&gt;1.41&lt;/baseImponible&gt;
+          &lt;valor&gt;0.17&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;2802&lt;/codigoPrincipal&gt;
+      &lt;codigoAuxiliar&gt;2802&lt;/codigoAuxiliar&gt;
+      &lt;descripcion&gt;Ensalada Thai            &lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;8.9&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;8.9&lt;/precioTotalSinImpuesto&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;12.00&lt;/tarifa&gt;
+          &lt;baseImponible&gt;8.9&lt;/baseImponible&gt;
+          &lt;valor&gt;1.07&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;2202&lt;/codigoPrincipal&gt;
+      &lt;codigoAuxiliar&gt;2202&lt;/codigoAuxiliar&gt;
+      &lt;descripcion&gt;Crp.Pechu Pavo Ques      &lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;7.19&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;7.19&lt;/precioTotalSinImpuesto&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;12.00&lt;/tarifa&gt;
+          &lt;baseImponible&gt;7.19&lt;/baseImponible&gt;
+          &lt;valor&gt;0.86&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+    &lt;detalle&gt;
+      &lt;codigoPrincipal&gt;1901&lt;/codigoPrincipal&gt;
+      &lt;codigoAuxiliar&gt;1901&lt;/codigoAuxiliar&gt;
+      &lt;descripcion&gt;Ensal. Barra             &lt;/descripcion&gt;
+      &lt;cantidad&gt;1&lt;/cantidad&gt;
+      &lt;precioUnitario&gt;5.79&lt;/precioUnitario&gt;
+      &lt;descuento&gt;0&lt;/descuento&gt;
+      &lt;precioTotalSinImpuesto&gt;5.79&lt;/precioTotalSinImpuesto&gt;
+      &lt;impuestos&gt;
+        &lt;impuesto&gt;
+          &lt;codigo&gt;2&lt;/codigo&gt;
+          &lt;codigoPorcentaje&gt;2&lt;/codigoPorcentaje&gt;
+          &lt;tarifa&gt;12.00&lt;/tarifa&gt;
+          &lt;baseImponible&gt;5.79&lt;/baseImponible&gt;
+          &lt;valor&gt;0.69&lt;/valor&gt;
+        &lt;/impuesto&gt;
+      &lt;/impuestos&gt;
+    &lt;/detalle&gt;
+  &lt;/detalles&gt;
+&lt;ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature814362"&gt;
+&lt;ds:SignedInfo Id="Signature-SignedInfo419918"&gt;
+&lt;ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"&gt;&lt;/ds:CanonicalizationMethod&gt;
+&lt;ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"&gt;&lt;/ds:SignatureMethod&gt;
+&lt;ds:Reference Id="SignedPropertiesID394335" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature814362-SignedProperties299946"&gt;
+&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"&gt;&lt;/ds:DigestMethod&gt;
+&lt;ds:DigestValue&gt;yG25jWbOUa+Jtcjw5l+IjrwWT0Q=&lt;/ds:DigestValue&gt;
+&lt;/ds:Reference&gt;
+&lt;ds:Reference URI="#Certificate1420785"&gt;
+&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"&gt;&lt;/ds:DigestMethod&gt;
+&lt;ds:DigestValue&gt;RXS2g4NIsGwCRwHxR+f9oXXeL4w=&lt;/ds:DigestValue&gt;
+&lt;/ds:Reference&gt;
+&lt;ds:Reference Id="Reference-ID-359471" URI="#comprobante"&gt;
+&lt;ds:Transforms&gt;
+&lt;ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"&gt;&lt;/ds:Transform&gt;
+&lt;/ds:Transforms&gt;
+&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"&gt;&lt;/ds:DigestMethod&gt;
+&lt;ds:DigestValue&gt;XKgJEXNtlwuL7rMCBSOI9dRYh5k=&lt;/ds:DigestValue&gt;
+&lt;/ds:Reference&gt;
+&lt;/ds:SignedInfo&gt;
+&lt;ds:SignatureValue Id="SignatureValue279415"&gt;
+ZD8lIqTTCfRR7SXM4/6UyGgcWDtkkgkMF+8xlygtSpC4Dnnwud/CC8N4NgXgEKk9RQaWBbCrudg3
+x1pPA/xWPbO6uJUliw0fBfEhr86A/I1pYkhLQv4gsVsK7F8Ov0mm8JsZ5lxvrmMWEVqrcDiQmCYV
+bmZ0vpIE764oWZSeZUAUHf+zl9VdkmaY8QPafHeiY8U7qDaoyV/KrMe0447JGEb3V+ssUouo67p+
+a/+evdQd2igMGSTBsGerJjT5hkPNehAlae1dFr0uS4d54an/D3fpwHFyZwwLQsfS/xGcAppjTWOI
+/19b8RfMo6/mG6gQ9MjGw+DzyMjddhJDSQlDNg==
+&lt;/ds:SignatureValue&gt;
+&lt;ds:KeyInfo Id="Certificate1420785"&gt;
+&lt;ds:X509Data&gt;
+&lt;ds:X509Certificate&gt;
+MIIJUzCCBzugAwIBAgIETkUz8DANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMCRUMxIjAgBgNV
+BAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VSVElG
+SUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQDExxB
+QyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMB4XDTE1MDkxMTIwMzE0OFoXDTE2MDkxMTIxMDE0
+OFowga8xCzAJBgNVBAYTAkVDMSIwIAYDVQQKExlCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMTcw
+NQYDVQQLEy5FTlRJREFEIERFIENFUlRJRklDQUNJT04gREUgSU5GT1JNQUNJT04tRUNJQkNFMQ4w
+DAYDVQQHEwVRVUlUTzEzMBEGA1UEBRMKMDAwMDEzMjQ5ODAeBgNVBAMTF1NFUkdJTyBNT1NRVUVS
+QSBBR1VJUlJFMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsrXOE1EFx0uDFkYLCtXb
+nCKfXhaBU7OcEzxG392N66yZrmIBzqD7Xh6bFAU2Erf/2h8hqRfGbfDAzP3LtiixIQW4vqr7GTVK
+SKK3GBwuwnLOMQuQTYWpFcN6ZZc696WtaIs5+Jd/XKyIl9P2lTDPZPkKCk6RRYsxFmIi2OeC9Ohq
+F5mcn2b2iyHg3YH/6RtF7o8tUOR/NYwnP9rA0/3mdvtXF1n2KxwHUNtzGg1eTGG3Y+lAmO+7G5n/
+tEFgTU8vuZEJZctzMco9zhX0tAuubJNL8ACGG5LNFI3sWfSXWZjkfBxb/hB7NEcI6mBViwgmivWz
+CqKGa0op3/w1G/h9bQIDAQABo4IEgTCCBH0wCwYDVR0PBAQDAgUgMIGRBggrBgEFBQcBAQSBhDCB
+gTA+BggrBgEFBQcwAYYyaHR0cDovL29jc3AuZWNpLmJjZS5lYy9lamJjYS9wdWJsaWN3ZWIvc3Rh
+dHVzL29jc3AwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwMS5lY2kuYmNlLmVjL2VqYmNhL3B1Ymxp
+Y3dlYi9zdGF0dXMvb2NzcDAbBgorBgEEAYKoOwMKBA0TC0FTRVJMQUNPIFNBMB0GCisGAQQBgqg7
+AwsEDxMNMTc5MTI3NDE1NjAwMTAaBgorBgEEAYKoOwMBBAwTCjE3MTUxNTcyNDIwFgYKKwYBBAGC
+qDsDAgQIEwZTRVJHSU8wGAYKKwYBBAGCqDsDAwQKEwhNT1NRVUVSQTAXBgorBgEEAYKoOwMEBAkT
+B0FHVUlSUkUwHwYKKwYBBAGCqDsDBQQREw9HRVJFTlRFIEdFTkVSQUwwOAYKKwYBBAGCqDsDBwQq
+EyhMQSBSQUJJREEgTjI2MjQ5IFkgRlJBTkNJU0NPIERFIE9SRUxMQU5BMBkGCisGAQQBgqg7AwgE
+CxMJMDIyNTAwNjU4MBUGCisGAQQBgqg7AwkEBxMFUXVpdG8wFwYKKwYBBAGCqDsDDAQJEwdFQ1VB
+RE9SMCAGCisGAQQBgqg7AzMEEhMQU09GVFdBUkUtQVJDSElWTzAmBgNVHREEHzAdgRtzbW9zcXVl
+cmFAY3JlcGVzeXdhZmZsZXMuZWMwggHfBgNVHR8EggHWMIIB0jCCAc6gggHKoIIBxoaB1WxkYXA6
+Ly9iY2VxbGRhcHN1YnAxLmJjZS5lYy9jbj1DUkwyNTksY249QUMlMjBCQU5DTyUyMENFTlRSQUwl
+MjBERUwlMjBFQ1VBRE9SLGw9UVVJVE8sb3U9RU5USURBRCUyMERFJTIwQ0VSVElGSUNBQ0lPTiUy
+MERFJTIwSU5GT1JNQUNJT04tRUNJQkNFLG89QkFOQ08lMjBDRU5UUkFMJTIwREVMJTIwRUNVQURP
+UixjPUVDP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3Q/YmFzZYY0aHR0cDovL3d3dy5lY2kuYmNl
+LmVjL0NSTC9lY2lfYmNlX2VjX2NybGZpbGVjb21iLmNybKSBtTCBsjELMAkGA1UEBhMCRUMxIjAg
+BgNVBAoTGUJBTkNPIENFTlRSQUwgREVMIEVDVUFET1IxNzA1BgNVBAsTLkVOVElEQUQgREUgQ0VS
+VElGSUNBQ0lPTiBERSBJTkZPUk1BQ0lPTi1FQ0lCQ0UxDjAMBgNVBAcTBVFVSVRPMSUwIwYDVQQD
+ExxBQyBCQU5DTyBDRU5UUkFMIERFTCBFQ1VBRE9SMQ8wDQYDVQQDEwZDUkwyNTkwHwYDVR0jBBgw
+FoAUGPnw++YyHJlmOSrKi7JpfUknv84wHQYDVR0OBBYEFElulnW31me4QT00XTTlh+IdVnaJMAkG
+A1UdEwQCMAAwGQYJKoZIhvZ9B0EABAwwChsEVjguMQMCBLAwDQYJKoZIhvcNAQELBQADggIBAHkB
+du7hdgafrZXGWrbzFXYkzUG4NSTMDBG7SD9uYY53IUWCR6px86y+bCA1rzYOs3SBkcCnJEAZnRZu
+d/AMUx0gUogcfrfbsf3EJORE5xM6Nbl6hML3TA3bmW9KV6Cb7prCqfm8GHqMBVpIXu2QxUfN+9cT
+9wnWN5AVeICAbDgIWZv7dhetgyYqXpUP8RKTMAySKrpu0xLY4vELQ+xzDXaLnsFPpeyK6ujDHqKi
+XzZ4gjAVSKY3LKXn7+JVQcueoWp+Pc32680ur2ilgrHKmoqgR/mUh0xLroDJE9jj0WT8khNtRCg7
+ylGlfgw8N7RfG1Aq/xWDWnfQjSY4rdDfU+aYGYLCE4iJUgHXEGbXmu0Q8ay2cxnaQiDR/Ola7tKE
+EfLHq6gETF9QWRSE5m7Aoh0fzzN8j+gRVHhPDNiuMjpTe36gUA4Jzs1QhRZDosDxqysn4Zn4T3A5
+9ASG/gmUXy3Fwx87qR8IxihQVTIs1clZQVGffKNL3LgxjJXR/hP/wUbYRMBcDH5T5uGwoILezh5n
+GMAMp+cc71ZRiNlLvQ55gwUWQS3LrhXIVg+8DiKCeT7jPSRemEx9htzHS6lB5u6tbHnu1Lz2fxa4
+YzjaQAR9NCvhE8GtA2FLSE/49f0LiVCcU52hM4ibetElaHK/7cwXUGf4hJqnPEydCLGusMMt
+&lt;/ds:X509Certificate&gt;
+&lt;/ds:X509Data&gt;
+&lt;ds:KeyValue&gt;
+&lt;ds:RSAKeyValue&gt;
+&lt;ds:Modulus&gt;
+srXOE1EFx0uDFkYLCtXbnCKfXhaBU7OcEzxG392N66yZrmIBzqD7Xh6bFAU2Erf/2h8hqRfGbfDA
+zP3LtiixIQW4vqr7GTVKSKK3GBwuwnLOMQuQTYWpFcN6ZZc696WtaIs5+Jd/XKyIl9P2lTDPZPkK
+Ck6RRYsxFmIi2OeC9OhqF5mcn2b2iyHg3YH/6RtF7o8tUOR/NYwnP9rA0/3mdvtXF1n2KxwHUNtz
+Gg1eTGG3Y+lAmO+7G5n/tEFgTU8vuZEJZctzMco9zhX0tAuubJNL8ACGG5LNFI3sWfSXWZjkfBxb
+/hB7NEcI6mBViwgmivWzCqKGa0op3/w1G/h9bQ==
+&lt;/ds:Modulus&gt;
+&lt;ds:Exponent&gt;AQAB&lt;/ds:Exponent&gt;
+&lt;/ds:RSAKeyValue&gt;
+&lt;/ds:KeyValue&gt;
+&lt;/ds:KeyInfo&gt;
+&lt;ds:Object Id="Signature814362-Object326170"&gt;&lt;etsi:QualifyingProperties Target="#Signature814362"&gt;&lt;etsi:SignedProperties Id="Signature814362-SignedProperties299946"&gt;&lt;etsi:SignedSignatureProperties&gt;&lt;etsi:SigningTime&gt;2016-02-14T15:31:16-05:00&lt;/etsi:SigningTime&gt;&lt;etsi:SigningCertificate&gt;&lt;etsi:Cert&gt;&lt;etsi:CertDigest&gt;&lt;ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"&gt;&lt;/ds:DigestMethod&gt;&lt;ds:DigestValue&gt;UsGVDMbhFYh+Govi3rmDKpzCqdA=&lt;/ds:DigestValue&gt;&lt;/etsi:CertDigest&gt;&lt;etsi:IssuerSerial&gt;&lt;ds:X509IssuerName&gt;CN=AC BANCO CENTRAL DEL ECUADOR,L=QUITO,OU=ENTIDAD DE CERTIFICACION DE INFORMACION-ECIBCE,O=BANCO CENTRAL DEL ECUADOR,C=EC&lt;/ds:X509IssuerName&gt;&lt;ds:X509SerialNumber&gt;1313158128&lt;/ds:X509SerialNumber&gt;&lt;/etsi:IssuerSerial&gt;&lt;/etsi:Cert&gt;&lt;/etsi:SigningCertificate&gt;&lt;/etsi:SignedSignatureProperties&gt;&lt;etsi:SignedDataObjectProperties&gt;&lt;etsi:DataObjectFormat ObjectReference="#Reference-ID-359471"&gt;&lt;etsi:Description&gt;contenido comprobante&lt;/etsi:Description&gt;&lt;etsi:MimeType&gt;text/xml&lt;/etsi:MimeType&gt;&lt;/etsi:DataObjectFormat&gt;&lt;/etsi:SignedDataObjectProperties&gt;&lt;/etsi:SignedProperties&gt;&lt;/etsi:QualifyingProperties&gt;&lt;/ds:Object&gt;&lt;/ds:Signature&gt;&lt;/factura&gt;</comprobante>
+            <mensajes />
+          </autorizacion>
+        </autorizaciones>
+      </RespuestaAutorizacionComprobante>
+    </ns2:autorizacionComprobanteResponse>
+  </soap:Body>
+</soap:Envelope>
