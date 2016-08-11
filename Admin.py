@@ -182,29 +182,6 @@ class DatabaseQueries:
 
 
 
-        # df = pd.DataFrame.from_dict(e ,orient='index').T
-        # df.to_csv('C:\\Users\\Esteban.Flores\\Documents\\GitHub\\Invoices\\facturas\\details.csv', index=True,
-        #                  encoding='UTF-8')
-
-
-        # for element in list:
-        #     df2 = pd.DataFrame.from_dict(element, orient='index').T
-        #     df2['fechaemision'] = pd.to_datetime(df2['fechaemision'], format="%d/%m/%Y")
-        #     df = df.append(df2, ignore_index=True)
-
-
-        # df = df[indices]  # Ordena Columnas
-        # df.sort_values(by='fechaemision', ascending=True)  # Ordena por fecha factura
-        # data = df.sort_values(by='fechaemision')
-        # data.index = range(0, len(data))
-        # try:
-        #     data.to_csv('C:\\Users\\Esteban.Flores\\Documents\\GitHub\\Invoices\\facturas\\details.csv', index=True,
-        #                 encoding='UTF-8')
-        #     print("Archivo generado con exito")
-        # except Exception as e:
-        #     print(e)
-
-
 
 A = DatabaseQueries()
 detalles = A.details()
