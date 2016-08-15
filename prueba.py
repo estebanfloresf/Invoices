@@ -105,5 +105,5 @@ try:
             writer.writerow(row)
 except Exception as e: print("The file is open, cannot generate new one")
 
-# print(listfinal)
+
 print("File generated in: %s seconds" % (time.time() - start_time))
