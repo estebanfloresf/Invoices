@@ -14,9 +14,7 @@ class DatabaseQueries:
     def __init__(self):
         client = MongoClient()
         self.db = client.primer
-        coll = self.db.dataset
-
-
+        coll = self.db.primer
 
     def renameArray(self):
         cursor = self.db.primer.find({"factura.infofactura.importetotal": {'$gt': '0'}},
@@ -82,16 +80,17 @@ class DatabaseQueries:
         data = df.sort_values(by='fechaemision')
         data.index = range(0, len(data))
         try:
-            data.to_csv('C:\\Users\\Esteban.Flores\\Documents\\GitHub\\Invoices\\Invoices.csv', index=True,
+            data.to_csv('C:\\Users\\Esteban.Flores\\Documents\\GitHub\\Invoices\\CSVs\\Invoices.csv', index=True,
                         encoding='UTF-8')
             print("Archivo generado con exito")
         except Exception as e:
             print(e)
 
-    def invoicesToCSV(self):
+    def finalArray(self):
         final =[]
         cursor = self.db.primer.find({"factura.infofactura.importetotal": {'$gt': '0'}},
                                           {"factura.infotributaria.razonsocial": 1,
+                                           "factura.infofactura.totalconimpuestos.totalimpuesto.valor": 1,
                                            "factura.infofactura.fechaemision": 1,
                                            "factura.detalles.detalle.preciototalsinimpuesto": 1,
                                            "factura.detalles.detalle.descripcion": 1,
@@ -175,7 +174,7 @@ class DatabaseQueries:
             fecha = ""
             band = 0
             while i <= len(element):
-                listavacia = ['', '', '', '']
+                listainicial = ['', '', '', '']
 
                 for key, value in element.items():
                     cantidad = re.search(r'cantidad+', str(key))
@@ -189,16 +188,16 @@ class DatabaseQueries:
                         digit = re.search(r'\d+', str(key)).start()
                         if int(key[digit]) == i:
                             if desc:
-                                listavacia[0] = value
+                                listainicial[0] = value
                                 continue
                             if cantidad:
-                                listavacia[1] = value
+                                listainicial[1] = value
                                 continue
                             if impvalor:
-                                listavacia[2] = value
+                                listainicial[2] = value
                                 continue
                             if psinimp:
-                                listavacia[3] = value
+                                listainicial[3] = value
                                 continue
 
                     except:
@@ -211,36 +210,37 @@ class DatabaseQueries:
                             band += 1
                             continue
 
+
                         if desc:
-                            listavacia[0] = value
+                            listainicial[0] = value
                             i += 1
                             continue
                         if cantidad:
-                            listavacia[1] = value
+                            listainicial[1] = value
                             i += 1
                             continue
                         if impvalor:
-                            listavacia[2] = value
+                            listainicial[2] = value
                             i += 1
                             continue
                         if psinimp:
-                            listavacia[3] = value
+                            listainicial[3] = value
                             i += 1
                             continue
 
-                if listavacia[0] != '':
-                    listavacia.insert(0, rsocial)
-                    listavacia.insert(1, fecha)
-                    listfinal.append(listavacia)
+                if listainicial[0] != '':
+                    listainicial.insert(0, rsocial)
+                    listainicial.insert(1, fecha)
+                    listfinal.append(listainicial)
 
-                if band == 2 and len(element) == 6:
+                if band == 2  and len(element) == 6:
                     break
 
                 i += 1
 
         try:
-            with open("output.csv", "w") as f:
-                fieldnames = [['razonsocial', 'fecha', 'descripcion', 'cantidad', 'impuesto', 'valor']]
+            with open("C:\\Users\\Esteban.Flores\\Documents\\GitHub\\Invoices\\CSVs\\detail.csv", "w") as f:
+                fieldnames = [['razonsocial', 'fecha', 'total','descripcion', 'cantidad', 'impuesto', 'valor']]
                 writer = csv.writer(f)
                 writer.writerows(fieldnames)
                 for row in listfinal:
@@ -250,10 +250,13 @@ class DatabaseQueries:
 
         print("File generated in: %s seconds" % (time.time() - start_time))
 
+    def info(self):
+        print("Last document registered by user:")
+
 
 
 
 A = DatabaseQueries()
-detalles = A.invoicesToCSV()
-dtlleindices = ['razonsocial', 'fechaemision', 'descripcion', 'impuesto_valor', 'precio_sin_impuesto', 'cantidad']
+detalles = A.finalArray()
 A.detailsToCSV(detalles)
+A.invoicestocsv()

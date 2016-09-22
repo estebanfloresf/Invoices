@@ -174,6 +174,7 @@ class Files:
         except Exception as e:
             print("There was a problem reading file: ", file)
 
+    # Insert record (xml transform to json) in the db
     def on_data(self, data):
         finaldoc = json.loads(data)
 
