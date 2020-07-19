@@ -49,3 +49,7 @@ facturas/details.csv
 output.csv
 facturas
 Tests
+
+
+.idea
+data
